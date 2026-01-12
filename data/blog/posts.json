@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1",
+    "title": "10 Amazing Disney Princess Party Ideas for Your Little One",
+    "slug": "10-amazing-disney-princess-party-ideas",
+    "excerpt": "Transform your child's birthday into a magical Disney Princess celebration with these creative party ideas, decoration tips, and activity suggestions.",
+    "content": "<p>Planning a Disney Princess party? Look no further! We've compiled the best ideas to make your little princess's special day unforgettable.</p><h2>1. Choose Your Theme</h2><p>Select from classic princesses like Cinderella, Belle, or Ariel. Each theme offers unique decoration and activity opportunities.</p><h2>2. Decoration Essentials</h2><p>Create a royal atmosphere with:</p><ul><li>Princess banners and backdrops</li><li>Sparkling balloons in princess colors</li><li>Elegant table settings</li><li>Magical lighting</li></ul><h2>3. Fun Activities</h2><p>Keep guests entertained with:</p><ul><li>Princess dress-up station</li><li>Crown decorating activity</li><li>Princess story time</li><li>Royal photo booth</li></ul><p>With the right planning and decorations, your Disney Princess party will be a magical success!</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200",
+    "author": "PartyExpert Team",
+    "publishedAt": "2024-01-15T10:00:00Z",
+    "updatedAt": "2024-01-20T10:00:00Z",
+    "categories": ["Party Ideas", "Disney Themes"],
+    "tags": ["disney", "princess", "birthday", "party-ideas", "kids-party"],
+    "featured": true
+  },
+  {
+    "id": "2",
+    "title": "Ultimate Guide to Balloon Decorations for Birthday Parties",
+    "slug": "ultimate-guide-balloon-decorations",
+    "excerpt": "Learn how to create stunning balloon arches, garlands, and centerpieces that will wow your party guests. Step-by-step instructions included.",
+    "content": "<p>Balloons are a party essential! Here's everything you need to know about creating beautiful balloon decorations.</p><h2>Types of Balloons</h2><p>Choose from latex balloons, foil balloons, or a combination of both for maximum impact.</p><h2>Creating a Balloon Arch</h2><p>Follow these steps to create a stunning entrance arch that sets the tone for your celebration.</p><h2>Balloon Centerpieces</h2><p>Simple yet elegant centerpieces can transform your party tables. Learn how to create them in minutes.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200",
+    "author": "Sarah Johnson",
+    "publishedAt": "2024-01-10T10:00:00Z",
+    "categories": ["Decorations", "DIY"],
+    "tags": ["balloons", "decorations", "diy", "party-tips"],
+    "featured": false
+  },
+  {
+    "id": "3",
+    "title": "Age-Appropriate Party Themes: What Works Best for Each Age Group",
+    "slug": "age-appropriate-party-themes",
+    "excerpt": "Discover the perfect party themes for different age groups, from toddlers to tweens. Expert recommendations for age-appropriate activities and decorations.",
+    "content": "<p>Choosing the right theme for your child's age is crucial for a successful party. Here's our guide:</p><h2>Ages 1-2: Simple and Safe</h2><p>Focus on bright colors, soft textures, and simple activities.</p><h2>Ages 3-5: Character Themes</h2><p>Popular characters and imaginative play work best for this age group.</p><h2>Ages 6-9: Adventure Themes</h2><p>Action-packed themes with interactive activities keep older kids engaged.</p><h2>Ages 10+: Trendy and Cool</h2><p>Let older kids choose their own themes based on current interests.</p>",
+    "featuredImage": "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1200",
+    "author": "PartyExpert Team",
+    "publishedAt": "2024-01-05T10:00:00Z",
+    "categories": ["Party Planning", "Age Groups"],
+    "tags": ["party-planning", "age-groups", "themes", "kids"],
+    "featured": false
+  }
+]
+

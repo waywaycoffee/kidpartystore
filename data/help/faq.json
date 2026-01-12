@@ -1,0 +1,43 @@
+[
+  {
+    "id": "1",
+    "question": "配送时效是多久？",
+    "questionEn": "What is the delivery time?",
+    "answer": "标准配送：7-10个工作日；加急配送：3-5个工作日；次日达：1-2个工作日。",
+    "answerEn": "Standard shipping: 7-10 business days; Express shipping: 3-5 business days; Overnight: 1-2 business days.",
+    "category": "shipping"
+  },
+  {
+    "id": "2",
+    "question": "运费如何计算？",
+    "questionEn": "How is shipping calculated?",
+    "answer": "运费根据配送地址和商品重量计算。满$50免标准运费，满$100免加急运费。",
+    "answerEn": "Shipping is calculated based on delivery address and product weight. Free standard shipping for orders over $50, free express shipping for orders over $100.",
+    "category": "shipping"
+  },
+  {
+    "id": "3",
+    "question": "如何下单？",
+    "questionEn": "How do I place an order?",
+    "answer": "选择商品加入购物车，点击结算，填写收货信息，选择配送方式，完成支付即可。",
+    "answerEn": "Add products to cart, click checkout, fill in shipping information, select shipping method, and complete payment.",
+    "category": "ordering"
+  },
+  {
+    "id": "4",
+    "question": "如何修改订单？",
+    "questionEn": "How do I modify an order?",
+    "answer": "订单提交后24小时内可以联系客服修改。超过24小时请申请取消后重新下单。",
+    "answerEn": "You can contact customer service to modify orders within 24 hours. After 24 hours, please cancel and reorder.",
+    "category": "ordering"
+  },
+  {
+    "id": "5",
+    "question": "退货政策是什么？",
+    "questionEn": "What is the return policy?",
+    "answer": "商品未使用且包装完好，可在收到货后7天内申请退货。定制商品不支持退货。",
+    "answerEn": "Unused products in original packaging can be returned within 7 days of receipt. Customized products are not returnable.",
+    "category": "return"
+  }
+]
+

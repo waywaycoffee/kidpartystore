@@ -1,0 +1,21 @@
+{
+  "return": {
+    "title": "退货政策",
+    "titleEn": "Return Policy",
+    "content": "1. 退货条件：商品未使用、包装完好、在收到货后7天内\n2. 定制商品不支持退货\n3. 退货流程：联系客服申请 → 寄回商品 → 退款处理\n4. 退款将在收到退货后3-5个工作日内处理",
+    "contentEn": "1. Return conditions: Unused products, original packaging, within 7 days of receipt\n2. Customized products are not returnable\n3. Return process: Contact customer service → Ship back products → Refund processing\n4. Refunds will be processed within 3-5 business days after receiving returned products"
+  },
+  "shipping": {
+    "title": "配送说明",
+    "titleEn": "Shipping Information",
+    "content": "1. 配送范围：全球配送\n2. 配送方式：标准快递（7-10天）、加急快递（3-5天）、次日达（1-2天）\n3. 运费：根据地址和重量计算，满$50免标准运费\n4. 物流追踪：发货后会发送追踪号码",
+    "contentEn": "1. Delivery area: Worldwide\n2. Shipping methods: Standard (7-10 days), Express (3-5 days), Overnight (1-2 days)\n3. Shipping cost: Calculated based on address and weight, free standard shipping for orders over $50\n4. Tracking: Tracking number will be sent after shipment"
+  },
+  "privacy": {
+    "title": "隐私政策",
+    "titleEn": "Privacy Policy",
+    "content": "1. 我们重视您的隐私\n2. 个人信息仅用于订单处理和配送\n3. 不会向第三方出售或分享您的信息\n4. 您可以随时要求删除您的个人信息",
+    "contentEn": "1. We value your privacy\n2. Personal information is only used for order processing and delivery\n3. We do not sell or share your information with third parties\n4. You can request deletion of your personal information at any time"
+  }
+}
+
