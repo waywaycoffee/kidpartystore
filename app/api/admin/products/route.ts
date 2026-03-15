@@ -6,30 +6,8 @@
  */
 
 import { verifyAdminAuth } from '@/lib/api-auth';
-import fs from 'fs/promises';
+import { getData, saveData } from '@/lib/storage-adapter';
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const PRODUCTS_FILE = path.join(DATA_DIR, 'products.json');
-
-async function ensureDataDir() {
-  try {
-    await fs.access(DATA_DIR);
-  } catch {
-    await fs.mkdir(DATA_DIR, { recursive: true });
-  }
-}
-
-async function getProducts() {
-  try {
-    await ensureDataDir();
-    const data = await fs.readFile(PRODUCTS_FILE, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
 
 interface Product {
   id: string;
@@ -38,9 +16,12 @@ interface Product {
   [key: string]: unknown;
 }
 
+async function getProducts(): Promise<Product[]> {
+  return await getData<Product[]>('products.json', []);
+}
+
 async function saveProducts(products: Product[]) {
-  await ensureDataDir();
-  await fs.writeFile(PRODUCTS_FILE, JSON.stringify(products, null, 2));
+  await saveData('products.json', products);
 }
 
 export async function GET() {

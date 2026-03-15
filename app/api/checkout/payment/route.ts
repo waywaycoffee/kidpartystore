@@ -2,31 +2,8 @@
  * 支付 API
  */
 
-import fs from 'fs/promises';
+import { getData, saveData } from '@/lib/storage-adapter';
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const ORDERS_FILE = path.join(DATA_DIR, 'orders.json');
-
-async function ensureDataDir() {
-  try {
-    await fs.access(DATA_DIR);
-  } catch {
-    await fs.mkdir(DATA_DIR, { recursive: true });
-  }
-}
-
-async function getOrders() {
-  try {
-    await ensureDataDir();
-    await fs.access(ORDERS_FILE);
-    const data = await fs.readFile(ORDERS_FILE, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
-}
 
 interface Order {
   id: string;
@@ -50,9 +27,12 @@ interface Order {
   updatedAt: string;
 }
 
+async function getOrders(): Promise<Order[]> {
+  return await getData<Order[]>('orders.json', []);
+}
+
 async function saveOrders(orders: Order[]) {
-  await ensureDataDir();
-  await fs.writeFile(ORDERS_FILE, JSON.stringify(orders, null, 2));
+  await saveData('orders.json', orders);
 }
 
 interface CartItem {
@@ -218,21 +198,11 @@ export async function POST(request: NextRequest) {
     // Auto-update inventory when order is paid
     if (orderStatus === 'paid') {
       try {
-        const PRODUCTS_FILE = path.join(DATA_DIR, 'products.json');
-        const INVENTORY_HISTORY_FILE = path.join(DATA_DIR, 'inventory-history.json');
-
-        // Update product stock
-        const productsData = await fs.readFile(PRODUCTS_FILE, 'utf-8');
-        const products = JSON.parse(productsData);
+        // Update product stock using storage adapter
+        const products = await getData<any[]>('products.json', []);
 
         // Get inventory history
-        let inventoryHistory: any[] = [];
-        try {
-          const historyData = await fs.readFile(INVENTORY_HISTORY_FILE, 'utf-8');
-          inventoryHistory = JSON.parse(historyData);
-        } catch {
-          inventoryHistory = [];
-        }
+        const inventoryHistory = await getData<any[]>('inventory-history.json', []);
 
         // Update stock for each item
         for (const item of order.items) {
@@ -261,8 +231,8 @@ export async function POST(request: NextRequest) {
         }
 
         // Save updated products and history
-        await fs.writeFile(PRODUCTS_FILE, JSON.stringify(products, null, 2));
-        await fs.writeFile(INVENTORY_HISTORY_FILE, JSON.stringify(inventoryHistory, null, 2));
+        await saveData('products.json', products);
+        await saveData('inventory-history.json', inventoryHistory);
       } catch (inventoryError) {
         console.error('Error updating inventory:', inventoryError);
         // Don't fail the order if inventory update fails

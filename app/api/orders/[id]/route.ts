@@ -2,20 +2,8 @@
  * 订单详情 API
  */
 
-import fs from 'fs/promises';
+import { getData, saveData } from '@/lib/storage-adapter';
 import { NextRequest, NextResponse } from 'next/server';
-import path from 'path';
-
-const DATA_DIR = path.join(process.cwd(), 'data');
-const ORDERS_FILE = path.join(DATA_DIR, 'orders.json');
-
-async function ensureDataDir() {
-  try {
-    await fs.access(DATA_DIR);
-  } catch {
-    await fs.mkdir(DATA_DIR, { recursive: true });
-  }
-}
 
 interface Order {
   id: string;
@@ -25,19 +13,11 @@ interface Order {
 }
 
 async function getOrders(): Promise<Order[]> {
-  try {
-    await ensureDataDir();
-    await fs.access(ORDERS_FILE);
-    const data = await fs.readFile(ORDERS_FILE, 'utf-8');
-    return JSON.parse(data);
-  } catch {
-    return [];
-  }
+  return await getData<Order[]>('orders.json', []);
 }
 
 async function saveOrders(orders: Order[]) {
-  await ensureDataDir();
-  await fs.writeFile(ORDERS_FILE, JSON.stringify(orders, null, 2));
+  await saveData('orders.json', orders);
 }
 
 export async function GET(
